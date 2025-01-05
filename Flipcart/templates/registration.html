@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body>
+<center>
+  <h1>Sathya Technology</h1>
+<hr>
+  <h3> <a style="text-decoration:none;" href="#">Home</a> &emsp; &emsp; <a style="text-decoration:none;" href="#">Register</a> &emsp; &emsp;
+        <a style="text-decoration:none;" href="# ">Login</a> </h3>
+<hr>
+<h3>Register Here</h3>
+<form action="{% url 'details' %}" method="post">
+    {% csrf_token%}
+  <fieldset style="width:30%">
+    <strong><p align="right"><a style="text-decoration:none;" href="#">Home</a> </p></strong>
+    <legend><b>Register</b></legend>
+    <table>
+      <tr>
+         <td><label> ID<span style="color:red">*</span>:</label></td>
+      <td><input type="number" id="Pid" name="pid" required></td>
+
+      </tr>
+      <tr>
+         <td><label>Name<span style="color:red">*</span>:</label></td>
+      <td><input type="text" id="name" name="name" required></td>
+
+      </tr>
+       <tr>
+        <td><label>Date Of Birth<span style="color:red">*</span>:</label></td>
+        <td><input type="date" id="dob" name="dob" required></td>
+      </tr>
+      <tr>
+        <td><label>Age <span style="color:red">*</span>:</label></td>
+      <td><input type="number" id="age" name="age" required></td>
+      </tr>
+      <tr>
+        <td><label>Gender:</label></td>
+        <td><input type="radio"  name="gender" value="Male">Male
+        <input type="radio"  name="gender" value="Female">Female  </td>
+      </tr>
+      <tr>
+        <td><label>Email <span style="color:red">*</span>:</label></td>
+        <td><input type="email" id="email" name="email" required></td>
+      </tr>
+      <tr>
+        <td><label>City <span style="color:red">*</span>:</label></td>
+        <td><select id="city" name="city" required>
+          <option>--Select--</option>
+          <option>Hyderabad</option>
+          <option>Vijayawada</option>
+        </select></td>
+      </tr>
+
+      <tr>
+        <td><label>State <span style="color:red">*</span>:</label></td>
+        <td><select id="state" name="state" required>
+          <option>--Select--</option>
+          <option>Telangana</option>
+          <option>Andhra Pradesh</option>
+        </select></td>
+      </tr>
+
+
+      <tr>
+                        <td><label>Hobbies :</label></td>
+                        <td><input type="checkbox"  name="hobbies[]" value="Reading Books">Reading Books &emsp; &ensp;
+                            <input type="checkbox"  name="hobbies[]" value="Browsing Net">Browsing Net<br>
+                            <input type="checkbox" name="hobbies[]" value="Cricket">Cricket &emsp; &emsp; &emsp; &emsp;
+                            <input type="checkbox"  name="hobbies[]" value="Cooking">Cooking
+                        </td>
+                    </tr>
+      <tr>
+
+        <td></td>
+        <td><input type="submit" value="Register"></td>
+
+    </table>
+
+  </fieldset>
+</form>
+</center>
+</body>
+</html>

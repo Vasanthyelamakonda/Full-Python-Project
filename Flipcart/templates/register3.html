@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Registration</title>
+</head>
+<body>
+<center>
+  <h1> Employee Registration</h1>
+  <fieldset style="width:30%; padding:2%; border-top-left-radius:30px; border-bottom-right-radius:30px">
+    <h2 style="color:blue">{{ msg }}</h2>
+    <form method="post" action="{% url 'register3' %}">
+      {% csrf_token %}
+      <table>
+        <tr>
+          <th><label>Employee ID :</label></th>
+          <td><input type="number" name="eid"></td>
+        </tr>
+        <tr>
+          <th><label>Employee Name :</label></th>
+          <td><input type="text" name="ename"></td>
+        </tr>
+        <tr>
+          <th><label>Salary :</label></th>
+          <td><input type="number" name="salary"></td>
+        </tr>
+        <tr>
+          <th><label>Depart No :</label></th>
+          <td><input type="number" name="dno"></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center"><input type="submit"></td>
+        </tr>
+      </table>
+    </form>
+  </fieldset>
+</center>
+
+</body>
+</html>

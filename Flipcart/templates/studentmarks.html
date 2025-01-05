@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Marks</title>
+</head>
+<body>
+<div><center>
+<table border="1" rules="all" width="50%" cellpadding="5">
+  <tr>
+    <th>Student ID</th>
+    <th>Student Name</th>
+    <th>Marks</th>
+    <th>Result</th>
+
+  </tr>
+  <tr>
+    <td align="center">{{sid}}</td>
+    <td align="center">{{sname}}</td>
+    <td align="center">
+    {% for i in marks %}
+       {{i}}
+    {% endfor %}
+    </td>
+    <td align="center">
+      {{result}}
+    </td>
+    </td>
+  </tr>
+
+</table>
+</center>
+</div>
+
+</body>
+</html>

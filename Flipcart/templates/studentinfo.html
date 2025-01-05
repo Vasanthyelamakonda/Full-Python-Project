@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Information</title>
+  <style>
+    table{
+    width:500px;
+    height:200px;
+
+    }
+
+    tr{
+    width:200px;
+    cellspacing:20px;
+    cellpading:10px;
+
+    }
+
+  </style>
+</head>
+<body><div><center>
+  <h1>Sathya Technology</h1><hr></center>
+</div>
+<div><center>
+<table border="1" rules="all">
+  <tr>
+    <th>Student ID</th>
+    <th>Student Name</th>
+    <th>Gender</th>
+    <th>Course</th>
+    <th>Image</th>
+
+  </tr>
+  <tr>
+    <td align="center">{{sid}}</td>
+    <td align="center">{{sname}}</td>
+    <td align="center">{{gender}}</td>
+    <td align="center">{{course}}</td>
+    <td align="center"><img src="{% static 'images/image1.jpg' %}" alt="Image" width="80%" height="80%"></td>
+  </tr>
+
+</table></div>
+  </center>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Ticket</title>
+</head>
+<body>
+<h1 align="center">
+  {% if age < 5 %}
+  No Ticket
+  {% elif age >= 5 and age <= 12 or age >= 60 %}
+  Half Ticket
+  {% else %}
+  Full Ticket
+  {% endif %}
+</h1>
+</body>
+</html>

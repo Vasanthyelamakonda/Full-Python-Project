@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Money</title>
+</head>
+<body><center>
+  <h2>Money Conversion</h2>
+<fieldset style="width:40%">
+  <form method="post" action="{% url 'money'%}">
+    {% csrf_token %}
+    <table>
+      <tr>
+        <th><label>Indian Rupee :</label></th>
+        <td><input type="number" name="indmoney" value="{{ indmoney }}" placeholder="Indian Rupee"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><input type="submit" value="Convert"></td>
+      </tr>
+      <tr>
+        <th><label>Dollars :</label></th>
+        <td><input type="number" name="usamoney" value="{{ usamoney }}" placeholder="United States Dollar"></td>
+      </tr>
+    </table>
+
+  </form>
+
+</fieldset>
+  <br>
+  <strong>{{error}}</strong>
+  </center>
+
+
+</body>
+</html>

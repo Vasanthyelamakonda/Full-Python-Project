@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<center>
+  <h1> Calculator</h1>
+  <fieldset style="width:50%">
+  <form method="post">
+    {% csrf_token %}
+    <table>
+      <tr>
+  <td><label>Enter ant Number :</label></td>
+  <td><input type="number" id="num1" name="num1" value="{{ a }}" required></td>
+        </tr>
+      <tr>
+  <td><label>Enter any Number :</label></td>
+    <td><input type="number" name="num2" id="num2" value="{{ b }}" required></td>
+      <tr>
+      <td><label>Sum :</label></td>
+      <td><input type="number" value="{{ add }}" readonly></td>
+    </tr>
+
+      <tr>
+      <td><label>Mul :</label></td>
+      <td><input type="number" value="{{ mul }}" readonly></td>
+    </tr>
+
+      <tr>
+      <td><label>Div :</label></td>
+      <td><input type="number" value="{{ div }}" readonly></td>
+    </tr>
+
+      <tr>
+      <td><label>Sub :</label></td>
+      <td><input type="number" value="{{ sub }}" readonly></td>
+    </tr>
+      <tr>
+        <th colspan="2">
+          <input type="submit" value="ADD"  name="cal" formaction="{% url 'cal' %}">
+          <input type="submit" value="SUB" name="cal" formaction="{% url 'cal' %}">
+          <input type="submit" value="MUL" name="cal" formaction="{% url 'cal' %}">
+          <input type="submit" value="DIV" name="cal" formaction="{% url 'cal' %}">
+        </th>
+      </tr>
+      </table>
+    <h3>{{error}}</h3>
+    </form>
+    </fieldset>
+</center>
+
+</body>
+</html>

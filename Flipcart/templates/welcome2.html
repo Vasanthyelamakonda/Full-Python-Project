@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+li{
+align:center;
+}
+    </style>
+</head>
+<body><center>
+<h1>Sathya Technology</h1>
+<hr>
+
+    <h2> <a style="text-decoration:none;" href="{% url 'home2' %}">Home</a>  &emsp; &emsp;
+
+         </h2>
+<hr>
+     <h3 align="right">HI <span><a style="text-decoration:none" href="{% url 'login2' %}">{{uname}}</a></span></h3>
+
+<h3><a href="{% url 'salary' %}">Salary Info</a> </h3>
+    </center>
+
+</body>
+</html>
